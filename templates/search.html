@@ -8,7 +8,9 @@
 	{# Looping through the results #}
 	{% for i in range( results['titles']|length ) %}
 		<div class="result">
-			<h4><a href="{{ results['links'][i] }}">{{ results['titles'][i]|string }}</a></h4>
+			<h4>
+				<a href="{{ results['links'][i] }}">{{ results['titles'][i]|string }}</a>
+			</h4>
 			<em> {{ results['cites'][i] }} </em>
 			<p> {{ results['descriptions'][i]|safe }} </p>
 		</div>

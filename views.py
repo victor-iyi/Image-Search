@@ -1,5 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, \
-     request, flash, abort, session
+from flask import Flask, render_template, redirect, url_for, request, flash, abort, session
 import os, gc
 
 from helpers import config
