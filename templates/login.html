@@ -1,0 +1,40 @@
+{% extends "template/_template.html" %}
+{% block body %}
+<section class="container row">
+	{% include "inc/_flash_messages.html" %}
+	<!-- Login Section -->
+	<div class="login-section col-md-6 col-lg-6 col-sm-6">
+		<form action="{{ url_for('login') }}" method="POST" id="login-form">
+			<fieldset>
+				<legend> Login </legend>
+				<p> <input type="text" placeholder="Username" name="username"> </p>
+				<p> <input type="password" placeholder="Password" name="password"> </p>
+				<p> <input type="submit" name="login" value="Log In" class="btn btn-default"> </p>
+			</fieldset>
+			{% if logerr %}
+				{% for err in login_error %}
+					<p class="error">{{ err }}</p>
+				{% endfor %}
+			{% endif %}
+		</form>
+	</div>
+	<!-- Register Section -->
+	<div class="register-section col-md-6 col-lg-6 col-sm-6">
+		<form action="{{ url_for('register') }}" method="POST" id="register-form">
+			<fieldset>
+				<legend> Register </legend>
+				<p> <input type="text" placeholder="Username" name="username"> </p>
+				<p> <input type="password" placeholder="Password" name="password"> </p>
+				<p> <input type="password" placeholder="Confirm Password" name="confirm-password"> </p>
+				<!-- <p><input type="checkbox" id="accept_tos" name="accept_tos">&nbsp;<label for="accept_tos"> I accept the terms of service and privacy policy</label></p> -->
+				<p> <input type="submit" name="register" value="Register" class="btn btn-default"> </p>
+			</fieldset>
+			{% if regerror %}
+				{% for err in register_error %}
+					<p class="error">{{ err }}</p>
+				{% endfor %}
+			{% endif %}
+		</form>
+	</div>
+</section>
+{% endblock %}

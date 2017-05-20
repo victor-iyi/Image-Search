@@ -1,0 +1,40 @@
+{% extends "template/_template.html" %}
+{% block body %}
+<div class="container" height="100%" style="padding-top: 50px">
+{% include "inc/_flash_messages.html" %}
+
+{# Checking if the results is empty #}
+{% if results %}
+	{# Looping through the results #}
+	{% for i in range( results['titles']|length ) %}
+		<div class="result">
+			<h4><a href="{{ results['links'][i] }}">{{ results['titles'][i]|string }}</a></h4>
+			<em> {{ results['cites'][i] }} </em>
+			<p> {{ results['descriptions'][i]|safe }} </p>
+		</div>
+	{% endfor %}
+	<!-- Pagination -->
+	<center><nav id="pagination">
+		<ul class="pagination">
+			<!-- Previous -->
+			{% if page > 1 %}
+				<li>
+					<a href="/search/{{img}}/{{page-1}}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+				</li>
+			{% endif %}
+			{% for page_no in range(1, 10) %}
+				<li><a href="/search/{{img}}/{{page_no}}">{{ page_no }}</a></li>
+			{% endfor %}
+			<!-- Next -->
+			<li>
+				<a href="/search/{{img}}/{{page+1}}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+			</li>
+		</ul>
+	</nav></center>
+	{% elif results == {} %}
+		<p>Empty set returned!</p>
+	{% else %}
+		<p>Oops, your search result was not found. Help improve <a href="/">Image Search</a> by visiting our <a href="/training-program/">Training Program</a></p>
+	{% endif %}
+</div>
+{% endblock %}

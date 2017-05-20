@@ -1,0 +1,40 @@
+<div class="container">
+  <nav class="navbar navbar-fixed-top" style="background: #FFF;">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand"> <span id="logo-image-text">Image</span> <span id="logo-search-text">SEARCH</span></a>
+    </div>
+    <div class="collapse navbar-collapse container" id="main-navbar">
+      <ul class="nav navbar-nav navbar-left">
+        {# Hide the search bar if currently not in the search page. #}
+        {% if request.path not in url_for('search') %}
+        <li class="nav navbar-nav navbar-left"></li>
+        <li class="navbar-form">
+          <form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+            <input type="text" size="50" style="height:35px;" name="img-url" id="img-url"
+              {% if img %} placeholder="{{ img }}" {% else %} placeholder="Image URL" {% endif %}>
+             <div class="btn-group" role="group" aria-label="...">
+              <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+              <label title="Select an image" for="img" class="btn btn-default"><span class="glyphicon glyphicon-folder-open"></span><input type="file" id="img" name="img-file" /></label>
+              <label title="Open Camera" for="open-camera" class="btn btn-default"><span class="glyphicon glyphicon-camera"></span><input type="file" accept="image/*" capture="camera" id="open-camera" name="img-camera" /></label>
+            </div>
+          </form>
+        </li>
+        {% endif %}
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {% if session.logged_in %}
+          <li><a href="/logout/">Logout</a></li>
+        {% else %}
+          <li><a href="/login/">Login</a></li>
+        {% endif %}
+        <li><a href="/settings/">Settings</a></li>
+        <li style="margin-right: 15px;"><a href="/help/">Help</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>

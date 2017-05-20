@@ -1,0 +1,33 @@
+{% extends "template/_template.html" %}
+{% block body %}
+<div class="form-wrapper">
+	<form class="form-wrapper" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+	 <h1>
+		 <span id="logo-image-text">Image</span>&nbsp;<span id="logo-search-text">SEARCH</span>
+	 </h1>
+		{% include "inc/_flash_messages.html" %}
+		<div class="row">
+			<div class="col-md-12">
+				<div class="input-group col-md-6" id="form-data">
+					<input type="text" name="img-url" id="img-url" placeholder="Image URL">
+					<label title="Select an image" for="img" id="img-file">
+						<span class="glyphicon glyphicon-folder-open"></span>
+						<input type="file" accept="image/*" id="img" name="img-file">
+					</label>
+				</div>
+			</div>
+		</div><br>
+		<div class="row">
+			<div class="col-md-12">
+				<button type="submit" class="btn btn-default" name="search" id="submit-button">
+					<span class="glyphicon glyphicon-search"></span> Search
+				</button>
+				<label class="btn btn-default" id="label-open-camera" for="open-camera">
+					<span class="glyphicon glyphicon-camera"></span>&nbsp;Open Camera
+					<input type="file" accept="image/*" capture="camera" id="open-camera" name="img-camera">
+				</label>
+			</div>
+		</div>
+	</form>
+</div>
+{% endblock %}

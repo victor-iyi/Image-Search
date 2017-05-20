@@ -1,0 +1,166 @@
+/************** OVERRIDE BOOTSTRAP CODE ***************/
+
+body {
+  padding-top: 60px;
+}
+
+.navbar .navbar-toggle {
+    border-color: #333;
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.navbar .icon-bar {
+	background-color: #555;
+}
+
+.navbar-nav a:hover {
+	background-color: #FFF;
+}
+
+#main-body {
+	margin-top: 20px;
+}
+/************ Home Page ************/
+label {
+	font-weight: normal;
+}
+
+a {
+	color: rgb(48,104,245);
+}
+
+a:hover {
+	transition: 0.8;
+	text-decoration: none;
+	color: rgb(122,122,211);
+}
+
+#logo-image-text {
+	color: rgb(229,42,34);
+	font-family: cursive;
+}
+
+#logo-search-text {
+	color: rgb(48,104,245);
+	font-family: Helvetica Arial Sans-serif;
+}
+
+
+.form-wrapper {
+	text-align: center;
+	margin-top: 13%;
+}
+
+#form-data {
+	width: 90%;
+	margin: auto;
+}
+
+input[type="file"] {
+	display: none;
+}
+
+.error {
+	font-style: italic;
+	color: rgb(229,42,34);
+	opacity: .8;
+}
+
+input[type="text"], input[type="password"] {
+	height: 40px;
+	padding: 10px;
+	color: #7B7B7B;
+	width: 70%;
+	margin: auto;
+}
+
+#img-file {
+	height: 40px;
+	padding: 10px;
+	color: #7B7B7B;
+	width: 10%;
+	margin: auto;
+	background: #f5f5f5; 
+}
+
+#img-file:hover {
+	transition: 0.5;
+	cursor: pointer;
+}
+#img, #open-camera, #submit-button, #label-open-camera {
+	padding: 10px;
+	/*color: #7B7B7B;*/
+	height: 40px;
+	margin-left: 2%;
+}
+
+/************ Search Page ************/
+
+
+.result h4 a {
+	color: rgb(48,104,245);
+
+}
+
+
+.result a:hover {
+	transition: 0.8;
+	text-decoration: none;
+	color: rgb(122,122,211);
+}
+
+.result p {
+	text-align: justify;
+}
+
+.result em {
+	color: rgb(40,157,62);
+
+}
+
+.result {
+	border-bottom : 1px solid #e3e3e3;
+}
+
+.result:last-child {
+	margin-bottom: 70px;
+}
+
+#pagination, #pagination a{
+	text-align: cetner;
+	/*margin:10px auto 40px auto;*/
+}
+
+#pagination a:visited {
+	/*color: rgb(48,104,245);*/
+}
+
+/************  Footer ************/
+.footer {
+	text-align: right;
+	position: fixed;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	margin: 0;
+	/*margin-top: 80px;*/
+	padding: 5px;
+	height: 30px;
+	width: 100%;
+	font-size: small;
+	padding-right: 20px;
+	border-top: 1px solid rgba(0,0,0,0.3);
+	background: rgba(240,240,240,0.95);
+	/*box-shadow: inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.25), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+	color: #7B7B7B;*/
+}
+

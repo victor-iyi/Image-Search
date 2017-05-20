@@ -1,0 +1,15 @@
+{% extends "template/_template.html" %}
+{% block body %}
+	<h4>Change Your Settings</h4><br>
+	<form action="" method="POST">
+		<h5>Advanced Search</h5>
+		<input type="radio" id="use-prev-search" name="adv-search" checked> <label for="use-prev-search">Use my previous searches</label><br>
+		<input type="radio" id="dont-use-prev-search" name="adv-search"> <label for="dont-use-prev-search">Don't use my previous searches</label><br>
+
+		<h5>Location</h5>
+		<input type="radio" id="use-location" name="location" checked> <label for="use-location">Use my location</label><br>
+		<input type="radio" id="dont-use-location" name="location"> <label for="dont-use-location">Don't use my location</label><br><br>
+
+		<input type="submit" value="Save Settings" class="btn btn-success">
+	</form>
+{% endblock %}

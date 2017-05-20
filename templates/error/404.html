@@ -1,0 +1,11 @@
+{% extends "template/_template.html" %}
+{% block body %}
+<div class="row 404">
+	<div style="float: left;" class="col-md-4">
+		<img src="{{ url_for('static', filename='img/404.jpg') }}" alt="404. Page Not Found" width="90%"  /></div>
+		<div style="float:left;" class="col-md-8">
+		<center><h3>Four Oh Four!</h3></center>
+		<h4> {{ error }}, the page you requested for can not be found. Try an <a href="/">Image Search</a></h4>
+	</div>
+</div><br/><br/><br/>
+{% endblock %}
