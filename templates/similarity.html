@@ -1,0 +1,62 @@
+{% extends "template/_template.html" %}
+{% block body %}
+<div class="similarity">
+
+<hr>
+
+<p>
+  If you don't get "queen" back, something went worng and baby SkyNet cries.
+</p>
+<p>
+  Try more examples too: <span>"he" is to "his" as "she" is to ?, "Berlin" is to "Germany" as "Paris" is to ?</span>(click to fill in).
+</p>
+<form action="{{ url_for('similarity') }}" method="POST" name="as-this-is-to-that">
+  <ul>
+    <li>
+      <input type="text" value="man" name="word-1"> is to
+    </li>
+    <li>
+      <input type="text" value="king" name="word-2"> as
+    </li>
+    <li>
+      <input type="text" value="woman" name="word-3"> is to
+    </li>
+    <li>
+      <input type="submit" value="?" name="answer" class="btn btn-danger">
+    </li>
+  </ul>
+</form>
+
+<hr>
+
+<p>
+  Try: <span> U.S.A.; Monty_Python; PHP; Madiba</span> (click to fill in).
+</p>
+<form action="{{ url_for('similarity') }}" method="POST" name="most-similar">
+  <ul>
+    <li>
+      <input type="text" value="iPhone" name="word">
+    </li>
+    <li>
+      <input type="submit" name="get-most-similar" value="Get Most Similar" class="btn btn-danger">
+  </ul>
+</form>
+
+<hr>
+
+<p>
+  Also try: <span>"monkey ape baboon human chimp gorilla"; "blue red green crimson transparent"</span> (click to fill in).
+</p>
+<form action="{{ url_for('similarity') }}" method="POST" name="doesnt-fit">
+  <ul>
+    <li>
+      <input type="text" name="phrase" value="dinner cereal breakfast launch">
+    </li>
+    <li>
+      <input type="submit" name="phrase-doesnt-fit" value="Which phrase doesn't fit?" class="btn btn-danger">
+    </li>
+  </ul>
+</form>
+
+</div> <!-- End similarity -->
+{% endblock %}

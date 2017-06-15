@@ -96,6 +96,11 @@ def logout():
 def settings():
     return render_template('settings.html')
 
+# SIMILARITY PAGE
+@app.route('/similarity/')
+def similarity():
+    return render_template('similarity.html')
+
 # HELP PAGE
 @app.route('/help/')
 def help():

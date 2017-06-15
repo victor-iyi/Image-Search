@@ -7,3 +7,27 @@
 127.0.0.1 – /apple-touch-icon.png
 	404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
 
+127.0.0.1 – /favicon.ico
+	404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 – /favicon.ico
+	404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 – /favicon.ico
+	404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 – /favicon.ico
+	404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 – /favicon.ico
+	404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 – /favicon.ico
+	404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 – /apple-touch-icon-precomposed.png
+	404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 – /apple-touch-icon.png
+	404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
