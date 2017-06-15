@@ -2,6 +2,7 @@
 {% block body %}
 <div class="similarity">
 
+{% include "inc/_flash_messages.html" %}
 <hr>
 
 <p>
@@ -10,7 +11,7 @@
 <p>
   Try more examples too: <span>"he" is to "his" as "she" is to ?, "Berlin" is to "Germany" as "Paris" is to ?</span>(click to fill in).
 </p>
-<form action="{{ url_for('similarity') }}" method="POST" name="as-this-is-to-that">
+<form action="/similarity?action=this-to-that" method="POST" name="this-is-to-that">
   <ul>
     <li>
       <input type="text" value="man" name="word-1"> is to
@@ -32,7 +33,7 @@
 <p>
   Try: <span> U.S.A.; Monty_Python; PHP; Madiba</span> (click to fill in).
 </p>
-<form action="{{ url_for('similarity') }}" method="POST" name="most-similar">
+<form action="/similarity?action=most-similar" method="POST">
   <ul>
     <li>
       <input type="text" value="iPhone" name="word">
@@ -47,13 +48,13 @@
 <p>
   Also try: <span>"monkey ape baboon human chimp gorilla"; "blue red green crimson transparent"</span> (click to fill in).
 </p>
-<form action="{{ url_for('similarity') }}" method="POST" name="doesnt-fit">
+<form action="/similarity?action=phrase-fitness" method="POST">
   <ul>
     <li>
       <input type="text" name="phrase" value="dinner cereal breakfast launch">
     </li>
     <li>
-      <input type="submit" name="phrase-doesnt-fit" value="Which phrase doesn't fit?" class="btn btn-danger">
+      <input type="submit" name="doesnt-fit" value="Which phrase doesn't fit?" class="btn btn-danger">
     </li>
   </ul>
 </form>

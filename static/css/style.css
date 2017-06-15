@@ -145,18 +145,27 @@ input[type="text"], input[type="password"] {
 }
 
 /************ Similarity Page ************/
+.btn-danger {
+	background: red;
+}
 
-form ul, form li {
+.similarity p span {
+  color: red;
+}
+
+.similarity form ul, form li {
   padding: 0;
 }
 
-form li {
+.similarity form li {
   list-style-type: none;
   margin-bottom: 8px;
 }
-form input[type=text] {
-  width: 50%;
+
+.similarity form input[type=text] {
+  width: 45%;
 }
+
 /************  Footer ************/
 .footer {
 	text-align: right;

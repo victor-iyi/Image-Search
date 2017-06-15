@@ -97,8 +97,17 @@ def settings():
     return render_template('settings.html')
 
 # SIMILARITY PAGE
-@app.route('/similarity/')
+
+@app.route('/similarity/', methods=['GET', 'POST'])
+@app.route('/similarity', methods=['GET', 'POST'])
 def similarity():
+    if request.method == 'POST':
+        if request.args.get('action') == 'this-to-that':
+            flash("This to that")
+        elif request.args.get('action') == 'most-similar':
+            flash("Most similar")
+        elif request.args.get('action') == 'phrase-fitness':
+            flash("Phrase doesnt fit")
     return render_template('similarity.html')
 
 # HELP PAGE
