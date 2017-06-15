@@ -9,7 +9,7 @@ from helpers.funcs import *
 from models import user
 from models.image import Recognizer
 from models.search import Search
-
+from models.similarity import most_similar, similar_by_word, doesnt_match
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = config.UPLOAD_FOLDER
@@ -103,11 +103,19 @@ def settings():
 def similarity():
     if request.method == 'POST':
         if request.args.get('action') == 'this-to-that':
-            flash("This to that")
+            word1 = request.form['word-1']
+            word2 = request.form['word-2']
+            word3 = request.form['word-3']
+            answer = most_similar(word1, word2, word3)
+            flash(answer)
         elif request.args.get('action') == 'most-similar':
-            flash("Most similar")
+            word = request.form['word']
+            answer = similar_by_word(word)
+            flash(answer)
         elif request.args.get('action') == 'phrase-fitness':
-            flash("Phrase doesnt fit")
+            phrase = request.form['phrase']
+            answer = doesnt_match(phrase)
+            flash(answer)
     return render_template('similarity.html')
 
 # HELP PAGE
