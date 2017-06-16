@@ -1,7 +1,25 @@
 /************** OVERRIDE BOOTSTRAP CODE ***************/
 
-body {
-  padding-top: 60px;
+body { padding-top: 60px; }
+
+label { font-weight: normal; }
+
+a { color: rgb(48,104,245); }
+
+a:hover {
+	transition: 0.8;
+	text-decoration: none;
+	color: rgb(122,122,211);
+}
+
+input[type="file"] { display: none; }
+
+.btn-danger { background: red; }
+
+.error {
+	font-style: italic;
+	color: rgb(229,42,34);
+	opacity: .8;
 }
 
 .navbar .navbar-toggle {
@@ -18,31 +36,13 @@ body {
     border-radius: 4px;
 }
 
-.navbar .icon-bar {
-	background-color: #555;
-}
+.navbar .icon-bar { background-color: #555; }
 
-.navbar-nav a:hover {
-	background-color: #FFF;
-}
+.navbar-nav a:hover { background-color: #FFF; }
 
-#main-body {
-	margin-top: 20px;
-}
+#main-body { margin-top: 20px; }
+
 /************ Home Page ************/
-label {
-	font-weight: normal;
-}
-
-a {
-	color: rgb(48,104,245);
-}
-
-a:hover {
-	transition: 0.8;
-	text-decoration: none;
-	color: rgb(122,122,211);
-}
 
 #logo-image-text {
 	color: rgb(229,42,34);
@@ -54,7 +54,6 @@ a:hover {
 	font-family: Helvetica Arial Sans-serif;
 }
 
-
 .form-wrapper {
 	text-align: center;
 	margin-top: 13%;
@@ -63,16 +62,6 @@ a:hover {
 #form-data {
 	width: 90%;
 	margin: auto;
-}
-
-input[type="file"] {
-	display: none;
-}
-
-.error {
-	font-style: italic;
-	color: rgb(229,42,34);
-	opacity: .8;
 }
 
 input[type="text"], input[type="password"] {
@@ -96,6 +85,7 @@ input[type="text"], input[type="password"] {
 	transition: 0.5;
 	cursor: pointer;
 }
+
 #img, #open-camera, #submit-button, #label-open-camera {
 	padding: 10px;
 	/*color: #7B7B7B;*/
@@ -104,13 +94,7 @@ input[type="text"], input[type="password"] {
 }
 
 /************ Search Page ************/
-
-
-.result h4 a {
-	color: rgb(48,104,245);
-
-}
-
+.result h4 a { color: rgb(48,104,245); }
 
 .result a:hover {
 	transition: 0.8;
@@ -118,53 +102,30 @@ input[type="text"], input[type="password"] {
 	color: rgb(122,122,211);
 }
 
-.result p {
-	text-align: justify;
-}
+.result { border-bottom : 1px solid #e3e3e3; }
 
-.result em {
-	color: rgb(40,157,62);
+.result em { color: rgb(40,157,62); }
 
-}
+.result p { text-align: justify; }
 
-.result {
-	border-bottom : 1px solid #e3e3e3;
-}
-
-.result:last-child {
-	margin-bottom: 70px;
-}
+.result:last-child { margin-bottom: 70px; }
 
 #pagination, #pagination a{
 	text-align: cetner;
 	/*margin:10px auto 40px auto;*/
 }
 
-#pagination a:visited {
-	/*color: rgb(48,104,245);*/
-}
-
 /************ Similarity Page ************/
-.btn-danger {
-	background: red;
-}
+.similarity p span { color: red; }
 
-.similarity p span {
-  color: red;
-}
-
-.similarity form ul, form li {
-  padding: 0;
-}
+.similarity form ul, form li { padding: 0; }
 
 .similarity form li {
   list-style-type: none;
   margin-bottom: 8px;
 }
 
-.similarity form input[type=text] {
-  width: 45%;
-}
+.similarity form input[type=text] { width: 45%; }
 
 /************  Footer ************/
 .footer {
