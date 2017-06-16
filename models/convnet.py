@@ -1,6 +1,5 @@
-import tensorflow as tf
-import numpy as np
-from tqdm import tqdm
+# import tensorflow as tf
+# import numpy as np
 
 
 class ConvolutionalNeuralNetwork(object):
@@ -8,7 +7,6 @@ class ConvolutionalNeuralNetwork(object):
     def __init__(self):
         """ A 5 layer convnet to classify images. """
         # Hyperparameters
-        
         pass
 
     def fit(self, X, y):
