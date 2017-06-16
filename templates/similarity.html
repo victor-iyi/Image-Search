@@ -11,16 +11,16 @@
 <p>
   Try more examples too: <span>"he" is to "his" as "she" is to ?, "Berlin" is to "Germany" as "Paris" is to ?</span>(click to fill in).
 </p>
-<form action="/similarity?action=this-to-that" method="POST" name="this-is-to-that">
+<form action="/similarity?action=this-to-that" method="POST">
   <ul>
     <li>
-      <input type="text" value="man" name="word-1"> is to
+      <input type="text" value="movie" name="word-1"> is to
     </li>
     <li>
-      <input type="text" value="king" name="word-2"> as
+      <input type="text" value="film" name="word-2"> as
     </li>
     <li>
-      <input type="text" value="woman" name="word-3"> is to
+      <input type="text" value="program" name="word-3"> is to
     </li>
     <li>
       <input type="submit" value="?" name="answer" class="btn btn-danger">
@@ -36,7 +36,7 @@
 <form action="/similarity?action=most-similar" method="POST">
   <ul>
     <li>
-      <input type="text" value="iPhone" name="word">
+      <input type="text" value="movie" name="word">
     </li>
     <li>
       <input type="submit" name="get-most-similar" value="Get Most Similar" class="btn btn-danger">
@@ -51,7 +51,7 @@
 <form action="/similarity?action=phrase-fitness" method="POST">
   <ul>
     <li>
-      <input type="text" name="phrase" value="dinner cereal breakfast launch">
+      <input type="text" name="phrase" value="good awesome danger nice">
     </li>
     <li>
       <input type="submit" name="doesnt-fit" value="Which phrase doesn't fit?" class="btn btn-danger">
