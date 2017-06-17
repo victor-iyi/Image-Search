@@ -11,7 +11,7 @@
 <p>
   Try more examples too: <span>"he" is to "his" as "she" is to ?, "Berlin" is to "Germany" as "Paris" is to ?</span>(click to fill in).
 </p>
-<form action="/similarity?action=this-to-that" method="POST">
+<form>
   <ul>
     <li>
       <input type="text" value="movie" name="word-1"> is to
@@ -23,7 +23,7 @@
       <input type="text" value="program" name="word-3"> is to
     </li>
     <li>
-      <input type="submit" value="?" name="answer" class="btn btn-danger">
+      <input type="button" value="?" id="most-similar" class="btn btn-danger">
     </li>
   </ul>
 </form>
@@ -33,13 +33,13 @@
 <p>
   Try: <span> U.S.A.; Monty_Python; PHP; Madiba</span> (click to fill in).
 </p>
-<form action="/similarity?action=most-similar" method="POST">
+<form>
   <ul>
     <li>
       <input type="text" value="movie" name="word">
     </li>
     <li>
-      <input type="submit" name="get-most-similar" value="Get Most Similar" class="btn btn-danger">
+      <input type="submit" id="similar-by-word" value="Get Most Similar" class="btn btn-danger">
     </li>
   </ul>
 </form>
@@ -49,13 +49,13 @@
 <p>
   Also try: <span>"baboon human chimp gorilla"; "blue red green crimson transparent"</span> (click to fill in).
 </p>
-<form action="/similarity?action=phrase-fitness" method="POST">
+<form>
   <ul>
     <li>
       <input type="text" name="phrase" value="good awesome danger nice">
     </li>
     <li>
-      <input type="submit" name="doesnt-fit" value="Which phrase doesn't fit?" class="btn btn-danger">
+      <input type="submit" id="doesnt-match" value="Which phrase doesn't fit?" class="btn btn-danger">
     </li>
   </ul>
 </form>

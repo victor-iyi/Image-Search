@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, request, session
+from flask import Flask, render_template, redirect, url_for, request, session, jsonify
 import os.path
 import gc
 
@@ -122,6 +122,27 @@ def similarity():
             answer = doesnt_match(phrase)
             flash(answer)
     return render_template('similarity.html')
+
+
+@app.route("/_similarity")
+def _similarity():
+    result = None
+    try:
+        action = request.args.get("action")
+        if action == "most_similar":
+            word1 = request.args.get("word1")
+            word2 = request.args.get("word2")
+            word3 = request.args.get("word3")
+            result = most_similar(word1, word2, word3)[0][0]
+        elif action == "similarity_by_word":
+            word = request.args.get("word")
+            result = similar_by_word(word)[0][0]
+        elif action == "doesnt_match":
+            phrase = request.args.get("phrase")
+            result = doesnt_match(phrase)
+    except Exception as e:
+        return jsonify(result=e)
+    return jsonify(result=result)
 
 
 # HELP PAGE
