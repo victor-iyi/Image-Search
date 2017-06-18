@@ -1,9 +1,10 @@
 # Search API (Deprecated): http://ajax.googleapis.com/ajax/services/search/web?v=1.0&q=
 # https://www.google.com/?client=safari&channel=iphone_bm&gws_rd=cr&ei=GkfAWOWPOMuqaabnrOgF#channel=iphone_bm&q=search+query&*
 # https://www.google.com.ng/search?q=time&biw=1085&bih=646&source=lnms&sa=X&ved=0ahUKEwj_rZXsv8fSAhWL1BoKHaiKAFsQ_AUIBygA
-from bs4 import BeautifulSoup
-import urllib.request
 import urllib.parse
+import urllib.request
+
+from bs4 import BeautifulSoup
 
 
 class Search(object):
@@ -17,7 +18,7 @@ class Search(object):
         :param page: Page to be displayed.
         :return: dictionary. Containing titles, links, cites and descriptions.
         """
-        page = int(str(page) + '0')
+        page = int('{}0'.format(page))
         query = urllib.parse.quote(query)
         self.googleSearchURL = self.googleSearchURL.format(query, page)
         source = Search.getSource(self.googleSearchURL)
@@ -74,5 +75,5 @@ class Search(object):
 
 if __name__ == '__main__':
     search = Search()
-    results = search.search('preaching to the choir')
+    results = search.search('preaching to the choir', 1)
     print(results)

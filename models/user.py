@@ -1,7 +1,8 @@
+import gc
+
 from flask import session
 from passlib.hash import sha256_crypt
 from pymysql import escape_string
-import gc
 
 from helpers.db_connect import connect
 
@@ -16,7 +17,7 @@ def register(username, password, confirm):
     :param confirm: Password confirmation.
     :return: SUCCESS if successful | error if not
     """
-    error = list()
+    error = []
     if len(username) == 0 or len(password) == 0 or len(confirm) == 0:
         error.append('Please fill up the Registration form!')
         return error
@@ -29,11 +30,11 @@ def register(username, password, confirm):
         error.append('Username and password must be above 3 characters')
     if not sha256_crypt.verify(confirm, password):
         error.append('Passwords do not match')
-    query = c.execute("SELECT * FROM users WHERE username=(%s)", (username))
+    query = c.execute("SELECT * FROM users WHERE username=(%s)", username)
     if int(query) > 0:
         error.append('Username already exist')
     elif int(query) < 0:
-        error.append('An error occured. Please try again')
+        error.append('An error occurred. Please try again')
         # if not accept_tos == 'on':
         #     error.append('You need to accept the terms of service and privacy policy')
     if len(error) == 0:

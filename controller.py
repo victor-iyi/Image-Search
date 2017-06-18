@@ -1,10 +1,10 @@
-from flask import Flask, render_template, redirect, url_for, request, session, jsonify
-import os.path
 import gc
+import os.path
+
+from flask import Flask, render_template, redirect, url_for, request, session, jsonify
 
 from helpers.decorators import login_required
 from helpers.funcs import *
-
 from models import user
 from models.search import Search
 from models.similarity import most_similar, similar_by_word, doesnt_match
@@ -56,7 +56,7 @@ def search(img=None, page=1):
         # image_filename = os.path.join(config.UPLOAD_FOLDER, img)
         # r = Recognizer()
         # image_label = r.recognize(image_filename)     # Returns a string of image label
-        image_label = 'victor'
+        image_label = 'technology'
         _search = Search()
         results = _search.search(image_label, page)
     except Exception as e:
@@ -96,12 +96,6 @@ def logout():
     return redirect(url_for('login'))
 
 
-# SETTINGS PAGE
-@app.route('/settings/')
-def settings():
-    return render_template('settings.html')
-
-
 # SIMILARITY PAGE
 @app.route('/similarity/', methods=['GET', 'POST'])
 @app.route('/similarity', methods=['GET', 'POST'])
@@ -124,25 +118,29 @@ def similarity():
     return render_template('similarity.html')
 
 
+# AJAX function. (Similarity Page)
 @app.route("/_similarity")
 def _similarity():
     result = None
-    try:
-        action = request.args.get("action")
-        if action == "most_similar":
-            word1 = request.args.get("word1")
-            word2 = request.args.get("word2")
-            word3 = request.args.get("word3")
-            result = most_similar(word1, word2, word3)[0][0]
-        elif action == "similarity_by_word":
-            word = request.args.get("word")
-            result = similar_by_word(word)[0][0]
-        elif action == "doesnt_match":
-            phrase = request.args.get("phrase")
-            result = doesnt_match(phrase)
-    except Exception as e:
-        return jsonify(result=e)
+    action = request.args.get("action")
+    if action == "most_similar":
+        word1 = request.args.get("word1")
+        word2 = request.args.get("word2")
+        word3 = request.args.get("word3")
+        result = most_similar(word1, word2, word3)[0][0]
+    elif action == "similarity_by_word":
+        word = request.args.get("word")
+        result = similar_by_word(word)[0][0]
+    elif action == "doesnt_match":
+        phrase = request.args.get("phrase")
+        result = doesnt_match(phrase)
     return jsonify(result=result)
+
+
+# SETTINGS PAGE
+@app.route('/settings/')
+def settings():
+    return render_template('settings.html')
 
 
 # HELP PAGE
