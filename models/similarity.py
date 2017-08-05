@@ -45,6 +45,7 @@ def train():
         sentences=sentences,
         min_count=3,
         workers=multiprocessing.cpu_count())
+    model.build_vocab(sentences)
     model.train(sentences=sentences)
     if not os.path.exists(os.path.join(DATASET_PATH, "trained")):
         os.mkdir(os.path.join(DATASET_PATH, "trained"))

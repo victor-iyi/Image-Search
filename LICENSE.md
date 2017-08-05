@@ -1,2 +1,2 @@
 
-Copyright (C) 2017 victor-iyiola
+Copyright © 2017 victor-iyiola
