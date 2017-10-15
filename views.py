@@ -9,6 +9,7 @@ from models import user
 from models.search import Search
 from models.similarity import most_similar, similar_by_word, doesnt_match
 
+
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = config.UPLOAD_FOLDER
 app.secret_key = config.SECRET_KEY
