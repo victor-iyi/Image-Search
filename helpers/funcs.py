@@ -14,6 +14,8 @@ def upload_file(file, filename, upload_folder):
     filename = secure_filename(filename)
     if file and allowed_file(filename):
         path = os.path.join(upload_folder, filename)
+        if not os.path.isdir(upload_folder):
+            os.makedirs(upload_folder)
         file.save(path)
         return True
     else:
