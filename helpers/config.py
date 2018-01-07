@@ -1,6 +1,6 @@
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
-UPLOAD_FOLDER = 'images/'
-DATASET_PATH = 'datasets/'
+UPLOAD_FOLDER = 'static/images/'
+DATASET_PATH = 'static/datasets/'
 ERROR_DIR = 'logs/errors/'
 FOUR_OH_FOUR_ERR_FILE = '404.txt'
 DATABASE_ERR_FILE = 'database.txt'

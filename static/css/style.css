@@ -1,151 +1,182 @@
 /************** OVERRIDE BOOTSTRAP CODE ***************/
 
-body { padding-top: 60px; }
-
-label { font-weight: normal; }
-
-a { color: rgb(48,104,245); }
-
-a:hover {
-	transition: 0.8;
-	text-decoration: none;
-	color: rgb(122,122,211);
+body {
+  padding-top: 60px;
 }
 
-input[type="file"] { display: none; }
+label {
+  font-weight: normal;
+}
 
-.btn-danger { background: red; }
+a {
+  color: rgb(48, 104, 245);
+}
+
+a:hover {
+  transition: 0.8;
+  text-decoration: none;
+  color: rgb(122, 122, 211);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.btn-danger {
+  background: red;
+}
 
 .error {
-	font-style: italic;
-	color: rgb(229,42,34);
-	opacity: .8;
+  font-style: italic;
+  color: rgb(229, 42, 34);
+  opacity: .8;
 }
 
 .navbar .navbar-toggle {
-    border-color: #333;
-    position: relative;
-    float: right;
-    padding: 9px 10px;
-    margin-top: 8px;
-    margin-right: 15px;
-    margin-bottom: 8px;
-    background-color: transparent;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background: transparent none;
+  border: 1px solid transparent;
+  border-radius: 4px;
 }
 
-.navbar .icon-bar { background-color: #555; }
+.navbar .icon-bar {
+  background-color: #555;
+}
 
-.navbar-nav a:hover { background-color: #FFF; }
+.navbar-nav a:hover {
+  background-color: #FFF;
+}
 
-#main-body { margin-top: 20px; }
+#main-body {
+  margin-top: 20px;
+}
 
 /************ Home Page ************/
 
 #logo-image-text {
-	color: rgb(229,42,34);
-	font-family: cursive;
+  color: rgb(229, 42, 34);
+  font-family: cursive;
 }
 
 #logo-search-text {
-	color: rgb(48,104,245);
-	font-family: Helvetica Arial Sans-serif;
+  color: rgb(48, 104, 245);
+  font-family: Helvetica Arial sans-serif;
 }
 
 .form-wrapper {
-	text-align: center;
-	margin-top: 13%;
+  text-align: center;
+  margin-top: 13%;
 }
 
 #form-data {
-	width: 90%;
-	margin: auto;
+  width: 90%;
+  margin: auto;
 }
 
 input[type="text"], input[type="password"] {
-	height: 40px;
-	padding: 10px;
-	color: #7B7B7B;
-	width: 70%;
-	margin: auto;
+  height: 40px;
+  padding: 10px;
+  color: #7B7B7B;
+  width: 70%;
+  margin: auto;
 }
 
-input[type="text"]:focus, input[type="password"]:focus
-{ outline: none; }
+input[type="text"]:focus, input[type="password"]:focus {
+  outline: none;
+}
 
 #img-file {
-	height: 40px;
-	padding: 10px;
-	color: #7B7B7B;
-	width: 10%;
-	margin: auto;
-	background: #f5f5f5;
+  height: 40px;
+  padding: 10px;
+  color: #7B7B7B;
+  width: 10%;
+  margin: auto;
+  background: #f5f5f5;
 }
 
 #img-file:hover {
-	transition: 0.5;
-	cursor: pointer;
+  transition: 0.5;
+  cursor: pointer;
 }
 
 #img, #open-camera, #submit-button, #label-open-camera {
-	padding: 10px;
-	/*color: #7B7B7B;*/
-	height: 40px;
-	margin-left: 2%;
+  padding: 10px;
+  /*color: #7B7B7B;*/
+  height: 40px;
+  margin-left: 2%;
 }
 
 /************ Search Page ************/
-.result h4 a { color: rgb(48,104,245); }
-
-.result a:hover {
-	transition: 0.8;
-	text-decoration: none;
-	color: rgb(122,122,211);
+.result h4 a {
+  color: rgb(48, 104, 245);
 }
 
-.result { border-bottom : 1px solid #e3e3e3; }
+.result a:hover {
+  transition: 0.8;
+  text-decoration: none;
+  color: rgb(122, 122, 211);
+}
 
-.result em { color: rgb(40,157,62); }
+.result {
+  border-bottom: 1px solid #e3e3e3;
+}
 
-.result p { text-align: justify; }
+.result em {
+  color: rgb(40, 157, 62);
+}
 
-.result:last-child { margin-bottom: 70px; }
+.result p {
+  text-align: justify;
+}
 
-#pagination, #pagination a{
-	text-align: cetner;
-	/*margin:10px auto 40px auto;*/
+.result:last-child {
+  margin-bottom: 70px;
+}
+
+#pagination, #pagination a {
+  text-align: cetner;
+  /*margin:10px auto 40px auto;*/
 }
 
 /************ Similarity Page ************/
-.similarity p span { color: red; }
+.similarity p span {
+  color: red;
+}
 
-.similarity form ul, form li { padding: 0; }
+.similarity form ul, form li {
+  padding: 0;
+}
 
 .similarity form li {
   list-style-type: none;
   margin-bottom: 8px;
 }
 
-.similarity form input[type=text] { width: 45%; }
+.similarity form input[type=text] {
+  width: 45%;
+}
 
 /************  Footer ************/
 .footer {
-	text-align: right;
-	position: fixed;
-	bottom: 0px;
-	left: 0;
-	right: 0;
-	margin: 0;
-	/*margin-top: 80px;*/
-	padding: 5px;
-	height: 30px;
-	width: 100%;
-	font-size: small;
-	padding-right: 20px;
-	border-top: 1px solid rgba(0,0,0,0.3);
-	background: rgba(240,240,240,0.95);
-	/*box-shadow: inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.25), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
-	color: #7B7B7B;*/
+  text-align: right;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  margin: 0;
+  /*margin-top: 80px;*/
+  padding: 5px;
+  height: 30px;
+  width: 100%;
+  font-size: small;
+  padding-right: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgba(240, 240, 240, 0.95);
+  /*box-shadow: inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.25), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+  color: #7B7B7B;*/
 }
