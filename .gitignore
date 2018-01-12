@@ -55,7 +55,7 @@ venv.bak/
 
 
 ### JetBrains template
-.idea/
+.idea
 
 ### macOS template
 .DS_Store
