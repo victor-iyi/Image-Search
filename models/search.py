@@ -63,7 +63,8 @@ class Search(object):
         :return: string, source code of a given URL.
         """
         headers = {
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'}
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) '
+                          'Chrome/56.0.2924.87 Safari/537.36'}
         try:
             request = urllib.request.Request(url, headers=headers)
             response = urllib.request.urlopen(request)
